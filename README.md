@@ -63,6 +63,7 @@ The macro and weighted averages (F1-scores of 0.80 and 0.82, respectively) confi
 ###### confusion matrix
 
 ![matrix](img/confusion-matrix.png)
+
 confusion matrix reveals that the model performs excellently for the Anorganik class with almost no errors, but has two critical weaknesses that require my immediate attention. The most significant issue is that 90 actual Organik samples are misclassified as Toxic, which drastically lowers recall for Organik and artificially inflates false positives for Toxic – this could lead to unnecessary toxic waste handling costs and reduced trust in the system. Additionally, 28 Toxic samples are misclassified as Organik, further compromising precision for the Toxic category. While the Anorganik class needs no improvement, I must prioritize reducing the Organik-to-Toxic confusion by analyzing feature overlaps and adjusting decision boundaries. Until these issues are resolved, I consider the model reliable only for Anorganik detection, and not yet fully dependable for separating Organik from Toxic
 
 #### Demo Application
